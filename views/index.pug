@@ -1,0 +1,21 @@
+extends layout
+
+block content
+  h1 Express!
+  hr
+  a(href='/new_entry', class='btn btn-primary pull-right') Leave an entry!
+  
+  br
+  br
+    
+  each entry in entries 
+    div.panel.panel-default
+      div.panel-heading
+        div.text-muted.pull-right
+          p Date: #{entry.published}
+        p Title: #{entry.title}
+      div.panel-body
+        p Content: #{entry.message}
+  
+  else
+    p No entries yet.        

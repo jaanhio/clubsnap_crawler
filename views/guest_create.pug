@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  h1 Create your message!
+  hr
+  form(method='post' role='form')
+    div.form-group
+      label(for='title') Title:
+      input#title.form-control(type='text', placeholder='Interesting title?', name='title' required='true')
+    div.form-group
+      label(for='content') Message:
+      input#message.form-control(type='text', placeholder='Leave your message here', name='message', required='true')
+    div.form-group
+      input.btn.btn-primary(type='submit' value='post entry')
